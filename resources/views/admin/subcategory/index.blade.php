@@ -51,8 +51,8 @@
                                     
                                     <td>{{$detail->status==1 ? 'Active' : Inactive }}</td>
                                     <td>
-                                        <a href="{{route('admin-category-edit',$detail->id)}}" class="btn"><i class="fa fa-edit"></i></a>
-                                        <a href="{{route('admin-category-delete',$detail->id)}}" class="btn"><i class="fa fa-trash"></i>
+                                        <a href="{{route('admin-subcategory-edit',$detail->id)}}" class="btn"><i class="fa fa-edit"></i></a>
+                                        <a href="{{route('admin-subcategory-delete',$detail->id)}}" class="btn"><i class="fa fa-trash"></i>
                                     </td>
                                 </tr>
                                 @endforeach

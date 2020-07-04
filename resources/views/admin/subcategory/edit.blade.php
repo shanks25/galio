@@ -28,12 +28,21 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form id="add_form" name="add_form" action="{{route('admin-category-update',$category->id)}}" method="post" role="form">
+                    <form id="add_form" name="add_form" action="{{route('admin-subcategory-update',$subcategory->id)}}" method="post" role="form">
                         @csrf
                         <div class="box-body">
                             <div class="form-group">
+                                <label>Select Category</label>
+                                <select class="form-control select2" id="category" name="category" style="width: 100%;">
+                                    <option></option>
+                                    @foreach($category as $cat)
+                                    <option value="{{$cat->id}}" {{ $subcategory->category_id == $cat->id ? 'selected' : ''}}>{{$cat->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Name</label>
-                                <input type="text" class="form-control" id="name" value="{{$category->name}}" name="name" placeholder="Name">
+                                <input type="text" class="form-control" id="name" value="{{$subcategory->name}}" name="name" placeholder="Name">
                             </div>
 
                         </div>
