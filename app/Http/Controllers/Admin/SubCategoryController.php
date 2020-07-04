@@ -17,44 +17,50 @@ class SubCategoryController extends Controller
     }
     public function create()
     {
-        $category = Category::orderBy('name','ASC')->get();
-        return view('admin.subcategory.create',compact('category'));
+        $category = Category::orderBy('name', 'ASC')->get();
+        return view('admin.subcategory.create', compact('category'));
     }
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name'   => 'required|unique:categories,name,NULL,id,deleted_at,NULL',
+            'category' => 'required',
+            'name'   => 'required|unique:sub_categories,name,NULL,id,deleted_at,NULL',
 
         ]);
+        $da['category_id'] = $request->category;
         $da['name'] = $request->name;
         SubCategory::create($da);
-        Session::flash('message', 'Category Added Sucessfully');
+        Session::flash('message', 'Sub Category Added Sucessfully');
         Session::flash('alert-type', 'success');
-        return redirect()->route('admin-category-index');
+        return redirect()->route('admin-subcategory-index');
     }
     public function edit($id)
     {
-        $category = SubCategory::findOrFail($id);
-        return view('admin.subcategory.edit', compact('category'));
+        $category = Category::orderBy('name', 'ASC')->get();
+        $subcategory = SubCategory::findOrFail($id);
+        return view('admin.subcategory.edit', compact('category','subcategory'));
     }
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name'   => 'required|unique:categories,name,' . $id . ',id,deleted_at,NULL',
+            'category' => 'required',
+            'name'   => 'required|unique:sub_categories,name,' . $id . ',id,deleted_at,NULL',
         ]);
         $cat = SubCategory::findOrFail($id);
         $cat->name = $request->name;
+        $cat->category_id = $request->category;
+        
         $cat->save();
-        Session::flash('message', 'Category update Sucessfully');
+        Session::flash('message', 'Sub Category update Sucessfully');
         Session::flash('alert-type', 'success');
-        return redirect()->route('admin-category-index');
+        return redirect()->route('admin-subcategory-index');
     }
     public function destroy($id)
     {
         $sub = SubCategory::findOrFail($id);
         $sub->delete();
-        Session::flash('message', 'Category Delete Sucessfully');
+        Session::flash('message', 'Sub Category Delete Sucessfully');
         Session::flash('alert-type', 'success');
-        return redirect()->route('admin-category-index');
+        return redirect()->route('admin-subcategory-index');
     }
 }
