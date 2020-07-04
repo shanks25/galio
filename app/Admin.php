@@ -28,6 +28,8 @@ class Admin extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public $timestamps = false ;
+
     /**
      * Send the password reset notification.
      *

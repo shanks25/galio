@@ -6,12 +6,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Subscription Plan
+            Edit Category
             <!-- <small>advanced tables</small> -->
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Subscription Plan</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Master</a></li>
+            <li><a href="#">Edit Category</a></li>
         </ol>
     </section>
     @include('admin.includes.form-error')
@@ -24,33 +24,17 @@
                 <!-- general form elements -->
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Add Plan</h3>
+                        <!-- <h3 class="box-title">Add Plan</h3> -->
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form id="subscription_form" name="subscription_form" action="{{route('admin-subscription-create')}}" method="post" role="form">
+                    <form id="add_form" name="add_form" action="{{route('admin-category-update',$category->id)}}" method="post" role="form">
                         @csrf
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Title</label>
-                                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input type="text" class="form-control" id="name" value="{{$category->name}}" name="name" placeholder="Name">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Price</label>
-                                <input type="text" class="form-control number-only" id="price" name="price" placeholder="Price">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Days</label>
-                                <input type="text" class="form-control number-only" id="days" name="days" placeholder="Ex 30">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Description</label>
-                                <!-- <input type="text" class="form-control" id="days" name="days" placeholder="Title"> -->
-                                <textarea class="form-control" id="desc" name="desc"></textarea>
-                            </div>
-
 
                         </div>
                         <!-- /.box-body -->
@@ -86,13 +70,10 @@
         })
     });
     $(function() {
-        $("form[name='subscription_form']").validate({
+        $("form[name='add_form']").validate({
             ignore: [],
             rules: {
-                "title": "required",
-                "price": "required",
-                "days": "required",
-                "desc": "required",
+                "name": "required",
             },
             messages: {
                 // "title": "Field is Required",
@@ -102,5 +83,7 @@
             }
         });
     });
+    $('.page_category').addClass('active');
+    $('.page_master').addClass('active');
 </script>
 @endsection
