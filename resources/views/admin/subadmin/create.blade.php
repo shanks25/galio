@@ -1,5 +1,5 @@
 @extends('admin.layout.app')
-@section('title', 'Create User')
+@section('title', 'Create subadmin')
 @section('content')
 
 <style type="text/css">
