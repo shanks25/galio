@@ -14,4 +14,5 @@ Route::get('dashboard2', 'PagesController@index');
 
 Route::namespace('Admin')->prefix('admin')->group(function () {
 	Route::get('subscription', 'SubscriptionController@index')->name('admin-subscription');
+	Route::get('subscription/create', 'SubscriptionController@create')->name('admin-subscription-create');
 });
