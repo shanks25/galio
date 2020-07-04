@@ -29,7 +29,7 @@
 
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Data Table With Full Features</h3>
+                        <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -52,7 +52,10 @@
                                     <td>{{$detail->days}}</td>
                                     <td>{{$detail->price}}</td>
                                     <td>{{$detail->status==1 ? 'Active' : Inactive }}</td>
-                                    <td> </td>
+                                    <td>
+                                        <a href="{{route('admin-subscription-edit',$detail->id)}}" class="btn"><i class="fa fa-edit"></i></a>
+                                        <a href="{{route('admin-subscription-delete',$detail->id)}}" class="btn"><i class="fa fa-trash"></i>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
