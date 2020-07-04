@@ -61,7 +61,6 @@ class SubscriptionController extends Controller
     public function destroy($id)
     {
 
-        //get the record of Contact by id
         $sub = Subscription::findOrFail($id);
         $sub->delete();
         Session::flash('message', 'Plan Delete Sucessfully');

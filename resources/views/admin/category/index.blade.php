@@ -6,19 +6,19 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Subscription Plan
+            Categories
             <!-- <small>advanced tables</small> -->
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Subscription Plan</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Master</a></li>
+            <li><a href="#">Category</a></li>
         </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
-        <a href="{{route('admin-subscription-create')}}">
-            <button type="button" class="pull-right btn btn-info">+ Add Plan</button>
+        <a href="{{route('admin-category-create')}}">
+            <button type="button" class="pull-right btn btn-info">+ Add Category</button>
         </a>
         <br />
         <br />
@@ -37,24 +37,22 @@
                             <thead>
                                 <tr>
                                     <th>Sr. No. </th>
-                                    <th>Title</th>
-                                    <th>Days</th>
-                                    <th>Price</th>
+                                    <th>name</th>
+                                   
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($subscription as $key => $detail)
+                                @foreach($categories as $key => $detail)
                                 <tr>
                                     <td>{{ ++$key }}</td>
-                                    <td>{{$detail->title}}</td>
-                                    <td>{{$detail->days}}</td>
-                                    <td>{{$detail->price}}</td>
+                                    <td>{{$detail->name}}</td>
+                                    
                                     <td>{{$detail->status==1 ? 'Active' : Inactive }}</td>
                                     <td>
-                                        <a href="{{route('admin-subscription-edit',$detail->id)}}" class="btn"><i class="fa fa-edit"></i></a>
-                                        <a href="{{route('admin-subscription-delete',$detail->id)}}" class="btn"><i class="fa fa-trash"></i>
+                                        <a href="{{route('admin-category-edit',$detail->id)}}" class="btn"><i class="fa fa-edit"></i></a>
+                                        <a href="{{route('admin-category-delete',$detail->id)}}" class="btn"><i class="fa fa-trash"></i>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -87,6 +85,7 @@
             'autoWidth': false
         })
     });
-    $('.page_subscription').addClass('active');
+    $('.page_category').addClass('active');
+    $('.page_master').addClass('active');
 </script>
 @endsection

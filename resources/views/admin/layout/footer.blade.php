@@ -243,6 +243,7 @@
    <script src="{{ asset('admin/dist/js/demo.js') }}"></script>
    <script src="{{asset('toaster/toastr.js')}}"></script>
    <script src="{{asset('admin/js/jquery.validate.min.js')}}"></script>
+   <script src="{{asset('admin/bower_components/select2/dist/js/select2.full.min.js')}}"></script>
 
    <script>
      $.ajaxSetup({
