@@ -25,6 +25,9 @@ Route::post('/login', 'Auth\LoginController@login');
 Route::get('/register', 'Auth\LoginController@postRegister');
 Route::any('logout', 'Auth\LoginController@logout');
 
+Route::get('ajax/city', 'AjaxController@getCity')->name('getcity');
+
+
 Route::group(['prefix' => 'admin'], function () {
 	Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
 	Route::post('/login', 'AdminAuth\LoginController@login');

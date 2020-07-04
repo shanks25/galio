@@ -18,9 +18,13 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
 	Route::post('subscription/create', 'SubscriptionController@store')->name('admin-subscription-create');
 	Route::get('subscription', 'SubscriptionController@index')->name('admin-subscription');
 
-	Route::get('customers', 'customerController@index')->name('admin.customer.index');
+	Route::get('customer', 'customerController@index')->name('admin.customer.index');
 	Route::get('customer/create', 'customerController@create')->name('admin.customer.create');
 	Route::post('customer/create', 'customerController@store')->name('admin.customer.store'); 
+	Route::get('customer/edit/{id}', 'customerController@edit')->name('admin.customer.edit'); 
+	Route::post('customer/update', 'customerController@update')->name('admin.customer.update'); 
+	Route::delete('customer/delete/{id}', 'customerController@destroy')->name('admin.customer.delete'); 
+
 
 
 });
