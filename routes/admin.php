@@ -34,12 +34,12 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
 	Route::post('subcategory/edit/{id}', 'SubCategoryController@update')->name('admin-subcategory-update');
 	Route::get('subcategory/delete/{id}', 'SubCategoryController@destroy')->name('admin-subcategory-delete');
 
-	Route::get('customer', 'customerController@index')->name('admin.customer.index');
-	Route::get('customer/create', 'customerController@create')->name('admin.customer.create');
-	Route::post('customer/create', 'customerController@store')->name('admin.customer.store'); 
-	Route::get('customer/edit/{id}', 'customerController@edit')->name('admin.customer.edit'); 
-	Route::post('customer/update/{id}', 'customerController@update')->name('admin.customer.update'); 
-	Route::delete('customer/delete/{id}', 'customerController@destroy')->name('admin.customer.delete'); 
+	Route::get('customer', 'CustomerController@index')->name('admin.customer.index');
+	Route::get('customer/create', 'CustomerController@create')->name('admin.customer.create');
+	Route::post('customer/create', 'CustomerController@store')->name('admin.customer.store'); 
+	Route::get('customer/edit/{id}', 'CustomerController@edit')->name('admin.customer.edit'); 
+	Route::post('customer/update/{id}', 'CustomerController@update')->name('admin.customer.update'); 
+	Route::delete('customer/delete/{id}', 'CustomerController@destroy')->name('admin.customer.delete'); 
 
 	Route::get('subadmin', 'SubAdminController@index')->name('admin.subadmin.index');
 	Route::get('subadmin/create', 'SubAdminController@create')->name('admin.subadmin.create');
