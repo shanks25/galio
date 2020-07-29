@@ -21,7 +21,8 @@ class CustomerController extends Controller
 	public function create()
 	{
 		$states = State::all();
-		return view('admin.customer.create',compact('states'));
+		$city = City::all();
+		return view('admin.customer.create',compact('states','city'));
 	}
 
 
