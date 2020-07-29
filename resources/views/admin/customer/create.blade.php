@@ -124,7 +124,7 @@
                     <select required name="city_id" id="city" class="form-control">
                       <option value="">Select city</option>
                       @foreach($city as $cities)
-                      <option value="{{$cities->id}}">{{$cities->name}}</option>
+                      <option value="{{$cities->id}}">{{$cities->city}}</option>
                       @endforeach
                     </select>
                     </select>
