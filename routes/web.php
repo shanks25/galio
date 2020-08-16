@@ -25,6 +25,8 @@ Route::post('/login', 'Auth\LoginController@login');
 Route::get('/register', 'Auth\LoginController@postRegister');
 Route::any('logout', 'Auth\LoginController@logout');
 
+Route::view('temp','temp');
+
 Route::get('ajax/city', 'AjaxController@getCity')->name('getcity');
 
 
