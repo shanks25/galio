@@ -44,6 +44,7 @@
             <li class="page_sub_cat"><a href="{{route('admin-subcategory-index')}}"><i class="fa fa-circle-o"></i>Sub Category</a></li>
           </ul>
         </li>
+        <li class="product_management"><a href="{{route('admin-product-index')}}"><i class="fa fa-circle-o text-red"></i> <span>Product Management </span></a></li>
         <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>

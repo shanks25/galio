@@ -48,4 +48,9 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
 	Route::post('subadmin/update/{id}', 'SubAdminController@update')->name('admin.subadmin.update'); 
 	Route::delete('subadmin/delete/{id}', 'SubAdminController@destroy')->name('admin.subadmin.delete'); 
 
+	// product start 
+	Route::get('product', 'ProductController@index')->name('admin-product-index');
+	Route::get('product/create', 'ProductController@create')->name('admin-product-create');
+	Route::post('product/store', 'ProductController@store')->name('admin-product-store');
+
 });
