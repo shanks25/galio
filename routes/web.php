@@ -12,9 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 include('admin.php');
 Route::get('/', function () {
-	return view('index');
+	return view('customer.home.index');
 });
 
 Auth::routes();
@@ -25,7 +26,7 @@ Route::post('/login', 'Auth\LoginController@login');
 Route::get('/register', 'Auth\LoginController@postRegister');
 Route::any('logout', 'Auth\LoginController@logout');
 
-Route::view('temp','temp');
+Route::view('temp', 'temp');
 
 Route::get('ajax/city', 'AjaxController@getCity')->name('getcity');
 
@@ -43,7 +44,5 @@ Route::group(['prefix' => 'admin'], function () {
 	Route::get('/password/reset', 'AdminAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
 	Route::get('/password/reset/{token}', 'AdminAuth\ResetPasswordController@showResetForm');
 
-	Route::get('logout','AdminAuth\LoginController@logout');
-
-	
+	Route::get('logout', 'AdminAuth\LoginController@logout');
 });
