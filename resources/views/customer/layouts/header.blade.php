@@ -86,9 +86,12 @@
 													<i class="fa fa-angle-down"></i>
 												</a>
 												<div class="dropdown-menu" aria-labelledby="myaccount">
-													<a class="dropdown-item" href="my-account.html">my account</a>
+													@guest
 													<a class="dropdown-item" href="login-register.html"> login</a>
 													<a class="dropdown-item" href="login-register.html">register</a>
+													@else
+													<a class="dropdown-item" href="my-account.html">My account</a>
+													@endguest
 												</div>
 											</div>
 										</li>
@@ -101,214 +104,214 @@
 									<li>
 										<a href="#">checkout</a>
 									</li> -->
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- header top end -->
+
+		<!-- header middle start -->
+		<div class="header-middle-area pt-20 pb-20">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-3">
+						<div class="brand-logo">
+							<a href="index.html">
+								<img src="{{asset('assets/img/logo/logo.png')}}" alt="brand logo">
+							</a>
+						</div>
+					</div> <!-- end logo area -->
+					<div class="col-lg-9">
+						<div class="header-middle-right">
+							<div class="header-middle-shipping mb-20">
+								<div class="single-block-shipping">
+									<div class="shipping-icon">
+										<i class="fa fa-clock-o"></i>
+									</div>
+									<div class="shipping-content">
+										<h5>Working time</h5>
+										<span>Mon- Sun: 8.00 - 18.00</span>
+									</div>
+								</div> <!-- end single shipping -->
+								<div class="single-block-shipping">
+									<div class="shipping-icon">
+										<i class="fa fa-truck"></i>
+									</div>
+									<div class="shipping-content">
+										<h5>free shipping</h5>
+										<span>On order over $199</span>
+									</div>
+								</div> <!-- end single shipping -->
+								<div class="single-block-shipping">
+									<div class="shipping-icon">
+										<i class="fa fa-money"></i>
+									</div>
+									<div class="shipping-content">
+										<h5>money back 100%</h5>
+										<span>Within 30 Days after delivery</span>
+									</div>
+								</div> <!-- end single shipping -->
+							</div>
+							<div class="header-middle-block">
+								<div class="header-middle-searchbox">
+									<input type="text" placeholder="Search...">
+									<button class="search-btn"><i class="fa fa-search"></i></button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- header middle end -->
+
+		<!-- main menu area start -->
+		<div class="main-header-wrapper bdr-bottom1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="main-header-inner">
+							<div class="category-toggle-wrap">
+								<div class="category-toggle">
+									category
+									<div class="cat-icon">
+										<i class="fa fa-angle-down"></i>
+									</div>
+								</div>
+								<nav class="category-menu hm-1">
+									<ul>
+										<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-desktop"></i>
+										computer</a></li>
+										<li class="menu-item-has-children"><a href="shop-grid-left-sidebar.html"><i class="fa fa-camera"></i> camera</a>
+											<!-- Mega Category Menu Start -->
+											<ul class="category-mega-menu">
+												<li class="menu-item-has-children">
+													<a href="shop-grid-left-sidebar.html">Smartphone</a>
+													<ul>
+														<li><a href="shop-grid-left-sidebar.html">Samsome</a></li>
+														<li><a href="shop-grid-left-sidebar.html">GL Stylus</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Uawei</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Cherry Berry</a></li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children">
+													<a href="shop-grid-left-sidebar.html">headphone</a>
+													<ul>
+														<li><a href="shop-grid-left-sidebar.html">Desktop Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Mobile Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Wireless
+														Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">LED Headphone</a></li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children">
+													<a href="shop-grid-left-sidebar.html">accessories</a>
+													<ul>
+														<li><a href="shop-grid-left-sidebar.html">Power Bank</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Data Cable</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Power Cable</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Battery</a></li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children">
+													<a href="shop-grid-left-sidebar.html">headphone</a>
+													<ul>
+														<li><a href="shop-grid-left-sidebar.html">Desktop Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Mobile Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Wireless
+														Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">LED Headphone</a></li>
+													</ul>
+												</li>
+											</ul><!-- Mega Category Menu End -->
+										</li>
+										<li class="menu-item-has-children"><a href="shop-grid-left-sidebar.html"><i class="fa fa-book"></i> smart phones</a>
+											<!-- Mega Category Menu Start -->
+											<ul class="category-mega-menu">
+												<li class="menu-item-has-children">
+													<a href="shop-grid-left-sidebar.html">Smartphone</a>
+													<ul>
+														<li><a href="shop-grid-left-sidebar.html">Samsome</a></li>
+														<li><a href="shop-grid-left-sidebar.html">GL Stylus</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Uawei</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Cherry Berry</a></li>
+														<li><a href="shop-grid-left-sidebar.html">uPhone</a></li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children">
+													<a href="shop-grid-left-sidebar.html">headphone</a>
+													<ul>
+														<li><a href="shop-grid-left-sidebar.html">Desktop Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Mobile Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Wireless
+														Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">LED Headphone</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Over-ear</a></li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children">
+													<a href="shop-grid-left-sidebar.html">accessories</a>
+													<ul>
+														<li><a href="shop-grid-left-sidebar.html">Power Bank</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Data Cable</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Power Cable</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Battery</a></li>
+														<li><a href="shop-grid-left-sidebar.html">OTG Cable</a></li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children">
+													<a href="shop-grid-left-sidebar.html">accessories</a>
+													<ul>
+														<li><a href="shop-grid-left-sidebar.html">Power Bank</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Data Cable</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Power Cable</a></li>
+														<li><a href="shop-grid-left-sidebar.html">Battery</a></li>
+														<li><a href="shop-grid-left-sidebar.html">OTG Cable</a></li>
+													</ul>
+												</li>
+											</ul><!-- Mega Category Menu End -->
+										</li>
+										<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-clock-o"></i>
+										watch</a></li>
+										<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-television"></i>
+										electronic</a></li>
+										<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-tablet"></i>
+										tablet</a></li>
+										<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-book"></i> books</a></li>
+										<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-microchip"></i>
+										microchip</a></li>
+										<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-bullhorn"></i>
+										bullhorn</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="main-menu">
+								<nav id="mobile-menu">
+									<ul>
+										<li class="active"><a href="index.html"><i class="fa fa-home"></i>Home</a>
+											
+										</li>
+										
+										<li><a href="blog-left-sidebar.html">Blog</a>
+											
+										</li>
+										<li><a href="contact-us.html">Contact us</a></li>
 									</ul>
 								</nav>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<!-- header top end -->
-
-			<!-- header middle start -->
-			<div class="header-middle-area pt-20 pb-20">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-lg-3">
-							<div class="brand-logo">
-								<a href="index.html">
-									<img src="{{asset('assets/img/logo/logo.png')}}" alt="brand logo">
-								</a>
-							</div>
-						</div> <!-- end logo area -->
-						<div class="col-lg-9">
-							<div class="header-middle-right">
-								<div class="header-middle-shipping mb-20">
-									<div class="single-block-shipping">
-										<div class="shipping-icon">
-											<i class="fa fa-clock-o"></i>
-										</div>
-										<div class="shipping-content">
-											<h5>Working time</h5>
-											<span>Mon- Sun: 8.00 - 18.00</span>
-										</div>
-									</div> <!-- end single shipping -->
-									<div class="single-block-shipping">
-										<div class="shipping-icon">
-											<i class="fa fa-truck"></i>
-										</div>
-										<div class="shipping-content">
-											<h5>free shipping</h5>
-											<span>On order over $199</span>
-										</div>
-									</div> <!-- end single shipping -->
-									<div class="single-block-shipping">
-										<div class="shipping-icon">
-											<i class="fa fa-money"></i>
-										</div>
-										<div class="shipping-content">
-											<h5>money back 100%</h5>
-											<span>Within 30 Days after delivery</span>
-										</div>
-									</div> <!-- end single shipping -->
-								</div>
-								<div class="header-middle-block">
-									<div class="header-middle-searchbox">
-										<input type="text" placeholder="Search...">
-										<button class="search-btn"><i class="fa fa-search"></i></button>
-									</div>
-									
-								</div>
-							</div>
-						</div>
+					<div class="col-12 d-block d-lg-none">
+						<div class="mobile-menu"></div>
 					</div>
 				</div>
 			</div>
-			<!-- header middle end -->
+		</div>
+		<!-- main menu area end -->
 
-			<!-- main menu area start -->
-			<div class="main-header-wrapper bdr-bottom1">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="main-header-inner">
-								<div class="category-toggle-wrap">
-									<div class="category-toggle">
-										category
-										<div class="cat-icon">
-											<i class="fa fa-angle-down"></i>
-										</div>
-									</div>
-									<nav class="category-menu hm-1">
-										<ul>
-											<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-desktop"></i>
-													computer</a></li>
-											<li class="menu-item-has-children"><a href="shop-grid-left-sidebar.html"><i class="fa fa-camera"></i> camera</a>
-												<!-- Mega Category Menu Start -->
-												<ul class="category-mega-menu">
-													<li class="menu-item-has-children">
-														<a href="shop-grid-left-sidebar.html">Smartphone</a>
-														<ul>
-															<li><a href="shop-grid-left-sidebar.html">Samsome</a></li>
-															<li><a href="shop-grid-left-sidebar.html">GL Stylus</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Uawei</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Cherry Berry</a></li>
-														</ul>
-													</li>
-													<li class="menu-item-has-children">
-														<a href="shop-grid-left-sidebar.html">headphone</a>
-														<ul>
-															<li><a href="shop-grid-left-sidebar.html">Desktop Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Mobile Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Wireless
-																	Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">LED Headphone</a></li>
-														</ul>
-													</li>
-													<li class="menu-item-has-children">
-														<a href="shop-grid-left-sidebar.html">accessories</a>
-														<ul>
-															<li><a href="shop-grid-left-sidebar.html">Power Bank</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Data Cable</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Power Cable</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Battery</a></li>
-														</ul>
-													</li>
-													<li class="menu-item-has-children">
-														<a href="shop-grid-left-sidebar.html">headphone</a>
-														<ul>
-															<li><a href="shop-grid-left-sidebar.html">Desktop Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Mobile Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Wireless
-																	Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">LED Headphone</a></li>
-														</ul>
-													</li>
-												</ul><!-- Mega Category Menu End -->
-											</li>
-											<li class="menu-item-has-children"><a href="shop-grid-left-sidebar.html"><i class="fa fa-book"></i> smart phones</a>
-												<!-- Mega Category Menu Start -->
-												<ul class="category-mega-menu">
-													<li class="menu-item-has-children">
-														<a href="shop-grid-left-sidebar.html">Smartphone</a>
-														<ul>
-															<li><a href="shop-grid-left-sidebar.html">Samsome</a></li>
-															<li><a href="shop-grid-left-sidebar.html">GL Stylus</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Uawei</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Cherry Berry</a></li>
-															<li><a href="shop-grid-left-sidebar.html">uPhone</a></li>
-														</ul>
-													</li>
-													<li class="menu-item-has-children">
-														<a href="shop-grid-left-sidebar.html">headphone</a>
-														<ul>
-															<li><a href="shop-grid-left-sidebar.html">Desktop Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Mobile Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Wireless
-																	Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">LED Headphone</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Over-ear</a></li>
-														</ul>
-													</li>
-													<li class="menu-item-has-children">
-														<a href="shop-grid-left-sidebar.html">accessories</a>
-														<ul>
-															<li><a href="shop-grid-left-sidebar.html">Power Bank</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Data Cable</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Power Cable</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Battery</a></li>
-															<li><a href="shop-grid-left-sidebar.html">OTG Cable</a></li>
-														</ul>
-													</li>
-													<li class="menu-item-has-children">
-														<a href="shop-grid-left-sidebar.html">accessories</a>
-														<ul>
-															<li><a href="shop-grid-left-sidebar.html">Power Bank</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Data Cable</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Power Cable</a></li>
-															<li><a href="shop-grid-left-sidebar.html">Battery</a></li>
-															<li><a href="shop-grid-left-sidebar.html">OTG Cable</a></li>
-														</ul>
-													</li>
-												</ul><!-- Mega Category Menu End -->
-											</li>
-											<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-clock-o"></i>
-													watch</a></li>
-											<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-television"></i>
-													electronic</a></li>
-											<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-tablet"></i>
-													tablet</a></li>
-											<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-book"></i> books</a></li>
-											<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-microchip"></i>
-													microchip</a></li>
-											<li><a href="shop-grid-left-sidebar.html"><i class="fa fa-bullhorn"></i>
-													bullhorn</a></li>
-										</ul>
-									</nav>
-								</div>
-								<div class="main-menu">
-									<nav id="mobile-menu">
-										<ul>
-											<li class="active"><a href="index.html"><i class="fa fa-home"></i>Home</a>
-												
-											</li>
-											
-											<li><a href="blog-left-sidebar.html">Blog</a>
-												
-											</li>
-											<li><a href="contact-us.html">Contact us</a></li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 d-block d-lg-none">
-							<div class="mobile-menu"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- main menu area end -->
-
-		</header>
+	</header>
 		<!-- header area end -->

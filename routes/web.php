@@ -19,11 +19,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+ 
 Route::get('/login', 'Auth\LoginController@showLoginForm');
 Route::post('/login', 'Auth\LoginController@login');
-Route::get('/register', 'Auth\LoginController@postRegister');
+Route::post('/register', 'Auth\LoginController@postRegister');
 Route::any('logout', 'Auth\LoginController@logout');
 
 Route::view('temp', 'temp');
