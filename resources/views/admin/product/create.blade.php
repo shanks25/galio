@@ -181,4 +181,36 @@ function remove_images(address_no) {
     // console.log(global_img_count);
 }
 </script>
+
+<script type="text/javascript">
+
+  $('#category').on('change', function() {
+    var cat = $(this).val();
+    url = base_url + "/admin/subcat/" + cat;
+    console.log(base_url + "/subcat/" + cat);
+    if (cat == "")
+    {
+      $('#sub_category').html('<option></option>');
+      $('#sub_category').prop('disabled', true);
+    }
+    else
+    {
+      $.ajax({
+        type: "GET",
+        url : url,
+        success:function(data){
+          $('#sub_category').html('');
+          sbucat = data.subcats ;
+          all_option = '<option value="">Select Sub Category </option>';
+          sbucat.forEach(element => {
+            all_option = all_option + '<option value=' + element['id']+' >' + element['name']+'</option>';
+          });
+          $('#sub_category').append(all_option);
+          $('#sub_category').prop('disabled', false);
+        }
+      });
+    }
+
+  });
+</script>
 @endsection

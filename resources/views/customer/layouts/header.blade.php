@@ -34,9 +34,12 @@
 													<i class="fa fa-angle-down"></i>
 												</a>
 												<div class="dropdown-menu" aria-labelledby="myaccount">
-													<a class="dropdown-item" href="my-account.html">my account</a>
+													@guest
 													<a class="dropdown-item" href="login-register.html"> login</a>
 													<a class="dropdown-item" href="login-register.html">register</a>
+													@else
+													<a class="dropdown-item" href="my-account.html">My account</a>
+													@endguest
 												</div>
 											</div>
 										</li>
@@ -49,14 +52,14 @@
 									<li>
 										<a href="#">checkout</a>
 									</li> -->
-									</ul>
-								</nav>
-							</div>
+								</ul>
+							</nav>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- header top end -->
+		</div>
+		<!-- header top end -->
 
 			<!-- header middle start -->
 			<div class="header-middle-area pt-20 pb-20">
@@ -111,25 +114,26 @@
 									</div>
 
 								</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- header middle end -->
+		</div>
+		<!-- header middle end -->
 
-			<!-- main menu area start -->
-			<div class="main-header-wrapper bdr-bottom1">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="main-header-inner">
-								<div class="category-toggle-wrap">
-									<div class="category-toggle">
-										category
-										<div class="cat-icon">
-											<i class="fa fa-angle-down"></i>
-										</div>
+		<!-- main menu area start -->
+		<div class="main-header-wrapper bdr-bottom1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="main-header-inner">
+							<div class="category-toggle-wrap">
+								<div class="category-toggle">
+									category
+									<div class="cat-icon">
+										<i class="fa fa-angle-down"></i>
 									</div>
 									<nav class="category-menu hm-1">
 										<ul>
@@ -172,13 +176,14 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 d-block d-lg-none">
-							<div class="mobile-menu"></div>
-						</div>
+					</div>
+					<div class="col-12 d-block d-lg-none">
+						<div class="mobile-menu"></div>
 					</div>
 				</div>
 			</div>
-			<!-- main menu area end -->
+		</div>
+		<!-- main menu area end -->
 
-		</header>
+	</header>
 		<!-- header area end -->

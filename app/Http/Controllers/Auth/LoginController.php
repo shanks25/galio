@@ -77,22 +77,22 @@ class LoginController extends Controller
 
 
     public function postRegister(Request $request)
-    {
+    {   
+
         $this->validate($request,[
 
-            'name'=>'required', 
+            'first_name'=>'required', 
+            'last_name'=>'required', 
             'password'=>'required',
-            'email'=>'required|unique:master_user',             
+            'email'=>'required|unique:users',             
 
 
         ]);
         $user = new User ;
-        $user->name = $request->name ;
-        $user->country_id = $request->country ;
+        $user->first_name = $request->first_name ;
+        $user->last_name = $request->last_name ;            
         $user->password =  Hash::make($request->password);
-        $user->email = $request->email ;
-        $user->mobile_no = $request->contact ;
-        $user->username = $request->username ;
+        $user->email = $request->email ; 
 
         $user->save();
 

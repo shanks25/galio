@@ -52,5 +52,6 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
 	Route::get('product', 'ProductController@index')->name('admin-product-index');
 	Route::get('product/create', 'ProductController@create')->name('admin-product-create');
 	Route::post('product/store', 'ProductController@store')->name('admin-product-store');
+	Route::get('subcat/{id}', 'ProductController@subcats')->name('admin-product-subcat');
 
 });

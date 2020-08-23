@@ -251,6 +251,7 @@
          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
        }
      });
+     var base_url = "{{url('/')}}";
      $(function() {
        $('.number-only').keypress(function(e) {
            if (isNaN(this.value + "" + String.fromCharCode(e.charCode))) return false;
