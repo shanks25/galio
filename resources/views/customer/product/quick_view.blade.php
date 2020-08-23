@@ -1,9 +1,10 @@
+
 <div class="row">
     <div class="col-lg-5">
         <div class="product-large-slider slick-arrow-style_2 mb-20">
             @foreach($latestProduct->productImages as $prodImage)
             <div class="pro-large-img">
-                <img src="{{asset('prodImage->path ?? assets/img/product/product-img2.jpg')}}" alt="product image">
+                <img src="{{asset($prodImage->path ?? 'assets/img/product/product-img2.jpg')}}" alt="">
             </div>
             @endforeach
 
@@ -11,7 +12,7 @@
         <div class="pro-nav slick-padding2 slick-arrow-style_2">
             @foreach($latestProduct->productImages as $prodImage)
             <div class="pro-nav-thumb">
-                <img src="{{asset('prodImage->path ?? assets/img/product/product-img2.jpg')}}" alt="product image">
+                <img src="{{asset($prodImage->path ?? 'assets/img/product/product-img2.jpg')}}" alt="product image">
             </div>
             @endforeach
         </div>
@@ -41,7 +42,7 @@
                 <div class="quantity">
                     <div class="pro-qty"><input type="text" value="1"></div>
                 </div>
-                 <div class="action_link">
+                <div class="action_link">
                     <a class="buy-btn" href="#">add to cart<i class="fa fa-shopping-cart"></i>
                     </a>
                 </div>
@@ -49,9 +50,5 @@
         </div>
     </div>
 </div>
-</div>
 <!-- product details inner end -->
-</div>
-</div>
-</div>
-</div>
+

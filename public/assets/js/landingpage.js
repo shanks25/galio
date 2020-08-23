@@ -1,5 +1,5 @@
 function quick_view(e) {
-    alert('hh');
+  
     var id = $(e).data('id');
    
     $.ajaxSetup({
@@ -19,8 +19,8 @@ function quick_view(e) {
         //     page = 1;
 
         // }
-    })
-    .done(function(data) {
+    
+    success: (function(data) {
         if (data.html == " ") {
             $('.ajax-load').html("No more records found");
            
@@ -30,9 +30,11 @@ function quick_view(e) {
         $('.ajax-load').hide();
         $("#results").empty();
         $("#results").append(data.html);
+        $('#quick_view').modal('show');
     })
+})
     .fail(function(jqXHR, ajaxOptions, thrownError) {
         alert('server not responding...');
     });
-    $('#quick_view').modal('show');
-}
+    
+}// Fill modal with content from link href
