@@ -162,14 +162,14 @@
 								<div class="main-menu">
 									<nav id="mobile-menu">
 										<ul>
-											<li class="active"><a href="index.html"><i class="fa fa-home"></i>Home</a>
+											<li class="active"><a href="/"><i class="fa fa-home"></i>Home</a>
 
 											</li>
 
-											<li><a href="blog-left-sidebar.html">Blog</a>
+											<li><a href="/productl">Product</a>
 
 											</li>
-											<li><a href="contact-us.html">Contact us</a></li>
+											<li><a href="/contact-us">Contact us</a></li>
 										</ul>
 									</nav>
 								</div>

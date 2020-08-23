@@ -143,24 +143,13 @@
             </div>
             <div class="modal-body">
                 <!-- product details inner end -->
-                <div class="product-details-inner">
+                <div class="product-details-inner" id="results">
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="product-large-slider slick-arrow-style_2 mb-20">
+                            
                                 <div class="pro-large-img">
                                     <img src="assets/img/product/product-details-img1.jpg" alt="" />
-                                </div>
-                                <div class="pro-large-img">
-                                    <img src="assets/img/product/product-details-img2.jpg" alt="" />
-                                </div>
-                                <div class="pro-large-img">
-                                    <img src="assets/img/product/product-details-img3.jpg" alt="" />
-                                </div>
-                                <div class="pro-large-img">
-                                    <img src="assets/img/product/product-details-img4.jpg" alt="" />
-                                </div>
-                                <div class="pro-large-img">
-                                    <img src="assets/img/product/product-details-img5.jpg" alt="" />
                                 </div>
                             </div>
                             <div class="pro-nav slick-padding2 slick-arrow-style_2">

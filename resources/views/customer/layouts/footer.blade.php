@@ -75,8 +75,8 @@
   			</div>
   			<div class="modal-body">
   				<!-- product details inner end -->
-  				<div class="product-details-inner">
-  					<div class="row">
+  				<div class="product-details-inner" id="results">
+  					<!-- <div class="row">
   						<div class="col-lg-5">
   							<div class="product-large-slider slick-arrow-style_2 mb-20">
   								<div class="pro-large-img">
@@ -139,7 +139,7 @@
   								</div>
   							</div>
   						</div>
-  					</div>
+  					</div> -->
   				</div>
   				<!-- product details inner end -->
   			</div>
@@ -172,6 +172,7 @@
   <script src="{{asset('assets/js/main.js')}}"></script>
   <!-- Switcher JS [Please Remove this when Choose your Final Projct] -->
   <script src="{{asset('assets/js/switcher.js')}}"></script>
+  @yield('scripts')
   </body>
 
 

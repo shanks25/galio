@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 //customer route started
 Route::get('/', 'Customer\HomeController@index')->name('home');
+Route::get('product/{id}', 'Customer\ProductController@productDetails')->name('product_details');
+Route::get('product_quick_view', 'Customer\ProductController@quick_view')->name('product_quick_view');
+
 //end customer route
 include('admin.php');
 
