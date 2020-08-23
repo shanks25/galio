@@ -7189,7 +7189,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     -ms-flex-align: baseline;
     align-items: baseline;
     margin-bottom: 5px;
-    color: #444444;
+    color: #ffffff;
     font-size: 13px;
     text-transform: capitalize;
 }
@@ -7201,6 +7201,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 .footer-widget .widget-body ul li {
+    color: #fff !important;
     margin-bottom: 8px;
 }
 

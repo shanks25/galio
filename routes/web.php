@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//customer route started
+Route::get('/', 'Customer\HomeController@index')->name('home');
+//end customer route
 include('admin.php');
-Route::get('/', function () {
-	return view('customer.home.index');
-});
+
 
 Auth::routes();
  
