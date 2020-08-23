@@ -31,6 +31,55 @@ function quick_view(e) {
         $("#results").empty();
         $("#results").append(data.html);
         $('#quick_view').modal('show');
+        
+	// prodct details slider active
+	$('.product-large-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		arrows: true,
+		asNavFor: '.pro-nav',
+		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
+	});
+
+	// product details slider nav active
+	$('.pro-nav').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.product-large-slider',
+		centerMode: true,
+		arrows: true,
+		centerPadding: 0,
+		focusOnSelect: true,
+		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>'
+	});
+
+	// prodct details slider active
+	$('.product-box-slider').slick({
+		autoplay: false,
+		infinite: true,
+		fade: false,
+		dots: false,
+		arrows: true,
+		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
+		slidesToShow: 3,
+		responsive: [{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
+	});
     })
 })
     .fail(function(jqXHR, ajaxOptions, thrownError) {
