@@ -28,7 +28,7 @@
 								<nav>
 									<ul>
 										<li>
-											<div class="dropdown header-top-dropdown">
+										<div class="dropdown header-top-dropdown">
 												<a class="dropdown-toggle" id="myaccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 													my account
 													<i class="fa fa-angle-down"></i>
@@ -52,14 +52,14 @@
 									<li>
 										<a href="#">checkout</a>
 									</li> -->
-								</ul>
-							</nav>
+									</ul>
+								</nav>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- header top end -->
+			<!-- header top end -->
 
 			<!-- header middle start -->
 			<div class="header-middle-area pt-20 pb-20">
@@ -114,26 +114,25 @@
 									</div>
 
 								</div>
-								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- header middle end -->
+			<!-- header middle end -->
 
-		<!-- main menu area start -->
-		<div class="main-header-wrapper bdr-bottom1">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="main-header-inner">
-							<div class="category-toggle-wrap">
-								<div class="category-toggle">
-									category
-									<div class="cat-icon">
-										<i class="fa fa-angle-down"></i>
+			<!-- main menu area start -->
+			<div class="main-header-wrapper bdr-bottom1">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="main-header-inner">
+								<div class="category-toggle-wrap">
+									<div class="category-toggle">
+										category
+										<div class="cat-icon">
+											<i class="fa fa-angle-down"></i>
+										</div>
 									</div>
 									<nav class="category-menu hm-1">
 										<ul>
@@ -176,14 +175,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-12 d-block d-lg-none">
-						<div class="mobile-menu"></div>
+						<div class="col-12 d-block d-lg-none">
+							<div class="mobile-menu"></div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- main menu area end -->
+			<!-- main menu area end -->
 
-	</header>
+		</header>
 		<!-- header area end -->
