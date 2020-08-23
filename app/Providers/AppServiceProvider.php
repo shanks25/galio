@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Category;
+use App\SubCategory;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        
+        view()->composer('*', function ($view) {
+
+            $view->with([
+
+                'CategoryMaster' =>  Category::with('subCategiries')->get(),
+                'SubcategoryMaster'     =>  SubCategory::all(),
+                
+
+            ]);
+        });
     }
 }
