@@ -12,7 +12,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Subscription Plan</a></li>
+            <li><a href="#">Product</a></li>
         </ol>
     </section>
 
@@ -52,8 +52,8 @@
                                     <td>{{$detail->price}}</td>
                                     <td>{{$detail->status == 1 ? 'Active' : 'Inactive' }}</td>
                                     <td>
-                                        <a href="{{route('admin-subscription-edit',$detail->id)}}" class="btn"><i class="fa fa-edit"></i></a>
-                                        <a href="{{route('admin-subscription-delete',$detail->id)}}" class="btn"><i class="fa fa-trash"></i>
+                                        <a href="{{route('admin-product-edit',$detail->id)}}" class="btn"><i class="fa fa-edit"></i></a>
+                                        <a href="{{route('admin-product-delete',$detail->id)}}" class="btn"><i class="fa fa-trash"></i>
                                     </td>
                                 </tr>
                                 @endforeach
