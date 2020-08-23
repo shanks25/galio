@@ -92,4 +92,12 @@ class ProductController extends Controller
             return redirect()->route('admin-product-index')->with($notification);
         }
     }
+    public function subcats($id)
+    {
+        // return $id;
+        // $id = $_GET['id'];
+        $subcats = Subcategory::where('category_id', '=', $id)->where('status', 1)->get();
+
+        return response()->json(['subcats' => $subcats],200);
+    }
 }
