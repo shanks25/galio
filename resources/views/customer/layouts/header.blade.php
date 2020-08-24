@@ -144,6 +144,26 @@
 												@if(isset($cat->subCategiries))
 												<!-- Mega Category Menu Start -->
 												<ul class="category-mega-menu">
+												
+												@foreach($cat->subCategiries as $subcat)
+												<li><a href="shop-grid-left-sidebar.html">
+													<!-- <i class="fa fa-clock-o"></i> -->
+													{{$subcat->name}}</a></li>
+													@endforeach
+
+												</ul><!-- Mega Category Menu End -->
+												@endif
+
+											</li>
+											@endforeach
+											
+										</ul>
+									</nav>
+								</div>
+								<div class="main-menu">
+									<nav id="mobile-menu">
+										<ul>
+											<li class="active"><a href="/"><i class="fa fa-home"></i>Home</a>
 
 													@foreach($cat->subCategiries as $subcat)
 													<li><a href="shop-grid-left-sidebar.html">
@@ -152,28 +172,14 @@
 														@endforeach
 
 													</ul><!-- Mega Category Menu End -->
-													@endif
+												 
 
-												</li>
-												@endforeach
+											<li><a href="/productl">Product</a>
 
-											</ul>
-										</nav>
-									</div>
-									<div class="main-menu">
-										<nav id="mobile-menu">
-											<ul>
-												<li class="active"><a href="index.html"><i class="fa fa-home"></i>Home</a>
-
-												</li>
-
-												<li><a href="blog-left-sidebar.html">Blog</a>
-
-												</li>
-												<li><a href="contact-us.html">Contact us</a></li>
-											</ul>
-										</nav>
-									</div>
+											</li>
+											<li><a href="/contact-us">Contact us</a></li>
+										</ul>
+									</nav>
 								</div>
 							</div>
 							<div class="col-12 d-block d-lg-none">

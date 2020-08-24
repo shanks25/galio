@@ -18,6 +18,9 @@ Route::get('/', 'Customer\HomeController@index')->name('home');
 Route::get('profile', 'Customer\CustomerProfileController@index');
 Route::post('profile', 'Customer\CustomerProfileController@updateProfile');
 Route::get('changepassword', 'Customer\CustomerProfileController@changePassword')->name('customer.password');
+Route::get('product/{id}', 'Customer\ProductController@productDetails')->name('product_details');
+Route::get('product_quick_view', 'Customer\ProductController@quick_view')->name('product_quick_view');
+
 //end customer route
 include('admin.php');
 
