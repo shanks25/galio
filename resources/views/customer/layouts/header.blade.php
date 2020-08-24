@@ -28,17 +28,18 @@
 								<nav>
 									<ul>
 										<li>
-										<div class="dropdown header-top-dropdown">
+											<div class="dropdown header-top-dropdown">
 												<a class="dropdown-toggle" id="myaccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 													my account
 													<i class="fa fa-angle-down"></i>
 												</a>
 												<div class="dropdown-menu" aria-labelledby="myaccount">
 													@guest
-													<a class="dropdown-item" href="login-register.html"> login</a>
-													<a class="dropdown-item" href="login-register.html">register</a>
+													<a class="dropdown-item" href="{{url('login')}}"> login</a>
+													<a class="dropdown-item" href="{{url('login')}}">register</a>
 													@else
-													<a class="dropdown-item" href="my-account.html">My account</a>
+													<a class="dropdown-item" href="{{url('profile')}}">My account</a>
+													<a class="dropdown-item" href="{{url('logout')}}">logout</a>
 													@endguest
 												</div>
 											</div>
@@ -52,29 +53,29 @@
 									<li>
 										<a href="#">checkout</a>
 									</li> -->
-									</ul>
-								</nav>
-							</div>
+								</ul>
+							</nav>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- header top end -->
+		</div>
+		<!-- header top end -->
 
-			<!-- header middle start -->
-			<div class="header-middle-area pt-20 pb-20">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-lg-3">
-							<div class="brand-logo">
-								<a href="/">
-									<img src="{{asset('assets/img/logo/logo.png')}}" alt="brand logo">
-								</a>
-							</div>
-						</div> <!-- end logo area -->
-						<div class="col-lg-9">
-							<div class="header-middle-right">
-								<div class="header-middle-shipping mb-20">
+		<!-- header middle start -->
+		<div class="header-middle-area pt-20 pb-20">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-3">
+						<div class="brand-logo">
+							<a href="/">
+								<img src="{{asset('assets/img/logo/logo.png')}}" alt="brand logo">
+							</a>
+						</div>
+					</div> <!-- end logo area -->
+					<div class="col-lg-9">
+						<div class="header-middle-right">
+							<div class="header-middle-shipping mb-20">
 									<!-- <div class="single-block-shipping">
 										<div class="shipping-icon">
 											<i class="fa fa-clock-o"></i>
@@ -164,7 +165,14 @@
 										<ul>
 											<li class="active"><a href="/"><i class="fa fa-home"></i>Home</a>
 
-											</li>
+													@foreach($cat->subCategiries as $subcat)
+													<li><a href="shop-grid-left-sidebar.html">
+														<!-- <i class="fa fa-clock-o"></i> -->
+														{{$subcat->name}}</a></li>
+														@endforeach
+
+													</ul><!-- Mega Category Menu End -->
+												 
 
 											<li><a href="/productl">Product</a>
 
@@ -174,14 +182,13 @@
 									</nav>
 								</div>
 							</div>
-						</div>
-						<div class="col-12 d-block d-lg-none">
-							<div class="mobile-menu"></div>
+							<div class="col-12 d-block d-lg-none">
+								<div class="mobile-menu"></div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- main menu area end -->
+				<!-- main menu area end -->
 
-		</header>
+			</header>
 		<!-- header area end -->
