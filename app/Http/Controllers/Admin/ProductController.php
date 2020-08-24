@@ -27,7 +27,7 @@ class ProductController extends Controller
         $category = Category::all();
         $subcategory = SubCategory::all();
         $units = UnitMaster::all();
-        $user = User::orderBy('name', 'ASC')->get();
+        $user = User::orderBy('first_name', 'ASC')->get();
         return view('admin.product.create', compact('category', 'subcategory', 'units', 'user'));
     }
     public function store(Request $request)
@@ -117,7 +117,8 @@ class ProductController extends Controller
         $category = Category::all();
         $subcategory = SubCategory::where('category_id',$product->category)->get();
         $units = UnitMaster::all();
-        $user = User::orderBy('name', 'ASC')->get();
+        $user = User::orderBy('first_name', 'ASC')->get();
+        // return $user[1]->full_name;
         return view('admin.product.edit', compact('category', 'subcategory', 'units', 'user','product'));
     }
     public function update(Request $request)

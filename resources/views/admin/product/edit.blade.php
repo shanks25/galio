@@ -156,7 +156,7 @@
                                     <option></option>
                                     <option value="0">Admin</option>
                                     @foreach($user as $userDetail)
-                                    <option value="{{$userDetail->id}}" {{$userDetail->id == $product->user_id ? 'selected' : ''}}>{{$userDetail->name}} ({{$userDetail->email}})</option>
+                                    <option value="{{$userDetail->id}}" {{$userDetail->id == $product->user_id ? 'selected' : ''}}>{{$userDetail->full_name}} ({{$userDetail->email}})</option>
                                     @endforeach
                                 </select>
                             </div>
