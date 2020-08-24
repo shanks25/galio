@@ -15,12 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 //customer route started
 Route::get('/', 'Customer\HomeController@index')->name('home');
+Route::get('profile', 'Customer\CustomerProfileController@index');
+Route::post('profile', 'Customer\CustomerProfileController@updateProfile');
+Route::get('changepassword', 'Customer\CustomerProfileController@changePassword')->name('customer.password');
 //end customer route
 include('admin.php');
 
 
 Auth::routes();
- 
+
 Route::get('/login', 'Auth\LoginController@showLoginForm');
 Route::post('/login', 'Auth\LoginController@login');
 Route::post('/register', 'Auth\LoginController@postRegister');
