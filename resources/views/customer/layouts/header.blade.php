@@ -1,12 +1,7 @@
 <body>
-
-
-
 	<div class="wrapper">
-
 		<!-- header area start -->
 		<header>
-
 			<!-- header top start -->
 			<div class="header-top-area bg-gray text-center text-md-left">
 				<div class="container">
@@ -53,29 +48,28 @@
 									<li>
 										<a href="#">checkout</a>
 									</li> -->
-								</ul>
-							</nav>
+									</ul>
+								</nav>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- header top end -->
-
-		<!-- header middle start -->
-		<div class="header-middle-area pt-20 pb-20">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-3">
-						<div class="brand-logo">
-							<a href="/">
-								<img src="{{asset('assets/img/logo/logo.png')}}" alt="brand logo">
-							</a>
-						</div>
-					</div> <!-- end logo area -->
-					<div class="col-lg-9">
-						<div class="header-middle-right">
-							<div class="header-middle-shipping mb-20">
+			<!-- header top end -->
+			<!-- header middle start -->
+			<div class="header-middle-area pt-20 pb-20">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-3">
+							<div class="brand-logo">
+								<a href="/">
+									<img src="{{asset('assets/img/logo/logo.png')}}" alt="brand logo">
+								</a>
+							</div>
+						</div> <!-- end logo area -->
+						<div class="col-lg-9">
+							<div class="header-middle-right">
+								<div class="header-middle-shipping mb-20">
 									<!-- <div class="single-block-shipping">
 										<div class="shipping-icon">
 											<i class="fa fa-clock-o"></i>
@@ -121,7 +115,6 @@
 				</div>
 			</div>
 			<!-- header middle end -->
-
 			<!-- main menu area start -->
 			<div class="main-header-wrapper bdr-bottom1">
 				<div class="container">
@@ -139,16 +132,16 @@
 										<ul>
 											@foreach($CategoryMaster as $cat)
 											<li class="{{$cat->has('subCategiries')?'menu-item-has-children':''}}"><a href="shop-grid-left-sidebar.html">
-												<!-- <i class="fa fa-camera"></i> -->
-												{{$cat->name}}</a> 
+													<!-- <i class="fa fa-camera"></i> -->
+													{{$cat->name}}</a>
 												@if(isset($cat->subCategiries))
 												<!-- Mega Category Menu Start -->
 												<ul class="category-mega-menu">
-												
-												@foreach($cat->subCategiries as $subcat)
-												<li><a href="shop-grid-left-sidebar.html">
-													<!-- <i class="fa fa-clock-o"></i> -->
-													{{$subcat->name}}</a></li>
+
+													@foreach($cat->subCategiries as $subcat)
+													<li><a href="shop-grid-left-sidebar.html">
+															<!-- <i class="fa fa-clock-o"></i> -->
+															{{$subcat->name}}</a></li>
 													@endforeach
 
 												</ul><!-- Mega Category Menu End -->
@@ -156,7 +149,7 @@
 
 											</li>
 											@endforeach
-											
+
 										</ul>
 									</nav>
 								</div>
@@ -165,19 +158,19 @@
 										<ul>
 											<li class="active"><a href="/"><i class="fa fa-home"></i>Home</a>
 
-													@foreach($cat->subCategiries as $subcat)
-													<li><a href="shop-grid-left-sidebar.html">
-														<!-- <i class="fa fa-clock-o"></i> -->
-														{{$subcat->name}}</a></li>
-														@endforeach
+												@foreach($cat->subCategiries as $subcat)
+											<li><a href="shop-grid-left-sidebar.html">
+													<!-- <i class="fa fa-clock-o"></i> -->
+													{{$subcat->name}}</a></li>
+											@endforeach
 
-													</ul><!-- Mega Category Menu End -->
-												 
+										</ul><!-- Mega Category Menu End -->
 
-											<li><a href="/productl">Product</a>
 
-											</li>
-											<li><a href="/contact-us">Contact us</a></li>
+										<li><a href="/productl">Product</a>
+
+										</li>
+										<li><a href="/contact-us">Contact us</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -190,5 +183,5 @@
 				</div>
 				<!-- main menu area end -->
 
-			</header>
+		</header>
 		<!-- header area end -->
