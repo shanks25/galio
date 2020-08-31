@@ -29,7 +29,7 @@
                 <!-- Checkout Login Coupon Accordion Start -->
                 <div class="checkoutaccordion" id="checkOutAccordion">
                     <div class="card">
-                        <h3>Returning Customer? <span data-toggle="collapse" data-target="#logInaccordion">Click Here To Login</span></h3>
+                        <!-- <h3>Returning Customer? <span data-toggle="collapse" data-target="#logInaccordion">Click Here To Login</span></h3> -->
 
                         <div id="logInaccordion" class="collapse" data-parent="#checkOutAccordion">
                             <div class="card-body">
@@ -76,7 +76,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <!-- <div class="card">
                         <h3>Have A Coupon? <span data-toggle="collapse" data-target="#couponaccordion">Click Here To Enter Your Code</span></h3>
                         <div id="couponaccordion" class="collapse" data-parent="#checkOutAccordion">
                             <div class="card-body">
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Checkout Login Coupon Accordion End -->
             </div>
@@ -132,39 +132,29 @@
                             <div class="single-input-item">
                                 <label for="country" class="required">Country</label>
                                 <select name="country nice-select" id="country">
-                                    <option value="Afghanistan">Afghanistan</option>
-                                    <option value="Albania">Albania</option>
-                                    <option value="Algeria">Algeria</option>
-                                    <option value="Armenia">Armenia</option>
-                                    <option value="Bangladesh">Bangladesh</option>
-                                    <option value="India">India</option>
-                                    <option value="Pakistan">Pakistan</option>
-                                    <option value="England">England</option>
-                                    <option value="London">London</option>
-                                    <option value="London">London</option>
-                                    <option value="Chaina">China</option>
+                                    <option value="1">India</option>
                                 </select>
                             </div>
-
+                            <div class="single-input-item">
+                                <label for="state" class="required">State / Divition</label>
+                                <select name="country nice-select" id="state" name="state">
+                                    @foreach($states as $state)
+                                    <option value="{{$state->id}}">{{$state->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="single-input-item">
+                                <label for="city" class="required">City</label>
+                                <select name="country nice-select" id="city" name="city">
+                                    @foreach($city as $cities)
+                                    <option value="{{$cities->id}}">{{$cities->city}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <div class="single-input-item">
                                 <label for="street-address" class="required pt-20">Street address</label>
                                 <input type="text" id="street-address" placeholder="Street address Line 1" required />
                             </div>
-
-                            <div class="single-input-item">
-                                <input type="text" placeholder="Street address Line 2 (Optional)" />
-                            </div>
-
-                            <div class="single-input-item">
-                                <label for="town" class="required">Town / City</label>
-                                <input type="text" id="town" placeholder="Town / City" required />
-                            </div>
-
-                            <div class="single-input-item">
-                                <label for="state">State / Divition</label>
-                                <input type="text" id="state" placeholder="State / Divition" />
-                            </div>
-
                             <div class="single-input-item">
                                 <label for="postcode" class="required">Postcode / ZIP</label>
                                 <input type="text" id="postcode" placeholder="Postcode / ZIP" required />
@@ -175,7 +165,7 @@
                                 <input type="text" id="phone" placeholder="Phone" />
                             </div>
 
-                            <div class="checkout-box-wrap">
+                            <!-- <div class="checkout-box-wrap">
                                 <div class="single-input-item">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="create_pwd">
@@ -189,9 +179,9 @@
                                         <input type="password" id="pwd" placeholder="Account Password" required />
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <div class="checkout-box-wrap">
+                            <!-- <div class="checkout-box-wrap">
                                 <div class="single-input-item">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="ship_to_different">
@@ -262,7 +252,7 @@
                                         <input type="text" id="postcode_2" placeholder="Postcode / ZIP" required />
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="single-input-item">
                                 <label for="ordernote">Order Note</label>
@@ -289,24 +279,17 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><a href="single-product.html">Suscipit Vestibulum <strong> × 1</strong></a></td>
-                                        <td>$165.00</td>
+                                        <td><a href="{{route('product_details',$product->id)}}">{{$product->title}} <strong> × {{$qty}}</strong></a></td>
+                                        <td>{{$product->selling_price}}</td>
                                     </tr>
-                                    <tr>
-                                        <td><a href="single-product.html">Ami Vestibulum suscipit <strong> × 4</strong></a></td>
-                                        <td>$165.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="single-product.html">Vestibulum suscipit <strong> × 2</strong></a></td>
-                                        <td>$165.00</td>
-                                    </tr>
+
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <td>Sub Total</td>
-                                        <td><strong>$400</strong></td>
+                                        <td><strong>{{$qty * $product->selling_price}}</strong></td>
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                         <td>Shipping</td>
                                         <td class="d-flex justify-content-center">
                                             <ul class="shipping-type">
@@ -324,10 +307,10 @@
                                                 </li>
                                             </ul>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                     <tr>
                                         <td>Total Amount</td>
-                                        <td><strong>$470</strong></td>
+                                        <td><strong>{{$qty * $product->selling_price}}</strong></td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -345,7 +328,7 @@
                                     <p>Pay with cash upon delivery.</p>
                                 </div>
                             </div>
-                            <div class="single-payment-method">
+                            <!-- <div class="single-payment-method">
                                 <div class="payment-method-name">
                                     <div class="custom-control custom-radio">
                                         <input type="radio" id="directbank" name="paymentmethod" value="bank" class="custom-control-input" />
@@ -355,8 +338,8 @@
                                 <div class="payment-method-details" data-method="bank">
                                     <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account..</p>
                                 </div>
-                            </div>
-                            <div class="single-payment-method">
+                            </div> -->
+                            <!-- <div class="single-payment-method">
                                 <div class="payment-method-name">
                                     <div class="custom-control custom-radio">
                                         <input type="radio" id="checkpayment" name="paymentmethod" value="check" class="custom-control-input" />
@@ -366,8 +349,8 @@
                                 <div class="payment-method-details" data-method="check">
                                     <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
                                 </div>
-                            </div>
-                            <div class="single-payment-method">
+                            </div> -->
+                            <!-- <div class="single-payment-method">
                                 <div class="payment-method-name">
                                     <div class="custom-control custom-radio">
                                         <input type="radio" id="paypalpayment" name="paymentmethod" value="paypal" class="custom-control-input" />
@@ -377,7 +360,7 @@
                                 <div class="payment-method-details" data-method="paypal">
                                     <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="summary-footer-area">
                                 <div class="custom-control custom-checkbox mb-14">
                                     <input type="checkbox" class="custom-control-input" id="terms" required />

@@ -68,14 +68,20 @@
                                     <span class="regular-price"><i class="fa fa-rupee"></i> {{$product->selling_price}}</span>
                                 </div>
                                 <p>{{$product->description}}</p>
-                                <div class="quantity-cart-box d-flex align-items-center">
-                                    <div class="quantity">
-                                        <div class="pro-qty"><input type="text" value="1"></div>
+                                <form action="{{route('checkout')}}" method="post" id="checkout_form">
+                                    @csrf
+                                    <div class="quantity-cart-box d-flex align-items-center">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" value="1" id="qty" name="qty">
+                                                <input type="hidden" id="product_id" name="product_id" value="{{$product->id}}">
+                                            </div>
+                                        </div>
+                                        <div class="action_link">
+                                            <a href="javascript:checkout()" class="buy-btn">Checkout<i class="fa fa-shopping-cart"></i></a>
+                                        </div>
                                     </div>
-                                    <div class="action_link">
-                                        <a class="buy-btn" href="{{route('checkout')}}">Checkout<i class="fa fa-shopping-cart"></i></a>
-                                    </div>
-                                </div>
+                                </form>
                                 <!-- <div class="useful-links mt-20">
                                             <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="fa fa-refresh"></i>compare</a>
                                             <a href="#" data-toggle="tooltip" data-placement="top" title="Wishlist"><i class="fa fa-heart-o"></i>wishlist</a>
@@ -746,6 +752,7 @@
 @endsection
 @section('scripts')
 <script src="{{asset('assets/js/landingpage.js')}}"></script>
+<script src="{{asset('assets/js/product.js')}}"></script>
 <script>
     var product_quick_view = "{{route('product_quick_view')}}";
 </script>

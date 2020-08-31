@@ -20,7 +20,8 @@ Route::post('profile', 'Customer\CustomerProfileController@updateProfile');
 Route::get('changepassword', 'Customer\CustomerProfileController@changePassword')->name('customer.password');
 Route::get('product/{id}', 'Customer\ProductController@productDetails')->name('product_details');
 Route::get('product_quick_view', 'Customer\ProductController@quick_view')->name('product_quick_view');
-Route::get('checkout', 'Customer\CheckoutController@index')->name('checkout');
+Route::post('checkout', 'Customer\CheckoutController@index')->name('checkout');
+Route::get('cities/{id}', 'Customer\CheckoutController@cities')->name('state-wise-city');
 
 //end customer route
 include('admin.php');

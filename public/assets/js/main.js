@@ -4,15 +4,15 @@
 
 	var $window = $(window);
 	$window.on('scroll', function () {
-        // Sticky menu 
+		// Sticky menu 
 		var scroll = $window.scrollTop();
 		if (scroll < 300) {
 			$(".sticky").removeClass("is-sticky");
 		} else {
 			$(".sticky").addClass("is-sticky");
 		}
-        
-        // Scroll To Top
+
+		// Scroll To Top
 		if ($(this).scrollTop() > 600) {
 			$('.scroll-top').removeClass('not-visible');
 		} else {
@@ -65,12 +65,12 @@
 			$('.category-menu .menu-item-has-children ul').slideDown();
 		}
 	}
-	
+
 	$(window).on({
-		load: function(){
+		load: function () {
 			categorySubMenuToggle();
 		},
-		resize: function(){
+		resize: function () {
 			categorySubMenuToggle();
 		}
 	});
@@ -133,17 +133,17 @@
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
 		appendArrows: ".slick-append",
 		responsive: [{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-				}
-			},
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+			}
+		},
 		]
 	});
 
@@ -167,7 +167,7 @@
 				settings: {
 					slidesToShow: 1,
 				}
-			}, ]
+			},]
 		});
 	});
 
@@ -205,19 +205,19 @@
 			nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
 			appendArrows: $arrowContainer,
 			responsive: [{
-					breakpoint: 992,
-					settings: {
-						slidesToShow: 2,
-						rows: 3,
-					}
-				},
-				{
-					breakpoint: 576,
-					settings: {
-						slidesToShow: 1,
-						rows: 3,
-					}
-				},
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					rows: 3,
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1,
+					rows: 3,
+				}
+			},
 			]
 		});
 	});
@@ -233,6 +233,41 @@
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
 		slidesToShow: 4,
 		responsive: [{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 3,
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				arrows: false,
+			}
+		},
+		]
+	});
+
+	// featured category carousel for 2 rows active js
+	$('.featured-carousel-active2').each(function () {
+		var $this = $(this);
+		var $row = $this.attr("data-row") ? parseInt($this.attr("data-row"), 10) : 1;
+		$this.slick({
+			infinite: true,
+			arrows: true,
+			dots: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			rows: $row,
+			prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+			nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+			responsive: [{
 				breakpoint: 1200,
 				settings: {
 					slidesToShow: 3,
@@ -251,41 +286,6 @@
 					arrows: false,
 				}
 			},
-		]
-	});
-
-	// featured category carousel for 2 rows active js
-	$('.featured-carousel-active2').each(function () {
-		var $this = $(this);
-		var $row = $this.attr("data-row") ? parseInt($this.attr("data-row"), 10) : 1;
-		$this.slick({
-			infinite: true,
-			arrows: true,
-			dots: false,
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			rows: $row,
-			prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
-			nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
-			responsive: [{
-					breakpoint: 1200,
-					settings: {
-						slidesToShow: 3,
-					}
-				},
-				{
-					breakpoint: 768,
-					settings: {
-						slidesToShow: 2,
-					}
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						slidesToShow: 1,
-						arrows: false,
-					}
-				},
 			]
 		});
 	});
@@ -301,23 +301,23 @@
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
 		slidesToShow: 5,
 		responsive: [{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 3,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-				}
-			},
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 3,
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+			}
+		},
 		]
 	});
 
@@ -344,32 +344,32 @@
 		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
 		responsive: [{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 4,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 3,
-					arrows: false,
-				}
-			},
-			{
-				breakpoint: 575,
-				settings: {
-					slidesToShow: 2,
-					arrows: false,
-				}
-			},
-			{
-				breakpoint: 479,
-				settings: {
-					slidesToShow: 1,
-					arrows: false,
-				}
-			},
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 4,
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 3,
+				arrows: false,
+			}
+		},
+		{
+			breakpoint: 575,
+			settings: {
+				slidesToShow: 2,
+				arrows: false,
+			}
+		},
+		{
+			breakpoint: 479,
+			settings: {
+				slidesToShow: 1,
+				arrows: false,
+			}
+		},
 		]
 	});
 
@@ -384,23 +384,23 @@
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
 		slidesToShow: 4,
 		responsive: [{
-				breakpoint: 991,
-				settings: {
-					slidesToShow: 3,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-				}
-			},
+			breakpoint: 991,
+			settings: {
+				slidesToShow: 3,
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+			}
+		},
 		]
 	});
 
@@ -424,7 +424,7 @@
 				settings: {
 					slidesToShow: 1,
 				}
-			}, ]
+			},]
 		});
 	});
 
@@ -463,17 +463,17 @@
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
 		slidesToShow: 3,
 		responsive: [{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-				}
-			},
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+			}
+		},
 		]
 	});
 
@@ -497,7 +497,7 @@
 	$('.img-zoom').zoom();
 
 	// quantity change js
-    var proQty = $('.pro-qty');
+	var proQty = $('.pro-qty');
 	proQty.prepend('<span class="dec qtybtn">-</span>');
 	proQty.append('<span class="inc qtybtn">+</span>');
 	proQty.on('click', '.qtybtn', function () {
@@ -521,7 +521,7 @@
 
 	// modal fix
 	$('.modal').on('shown.bs.modal', function (e) {
-        e.preventDefault();
+		e.preventDefault();
 		$('.pro-nav').resize();
 	});
 
@@ -570,7 +570,7 @@
 
 	// scroll to top
 	$('body').on('click', '.scroll-top', function (e) {
-        e.preventDefault();
+		e.preventDefault();
 		$('html,body').animate({
 			scrollTop: 0
 		}, 1000);
