@@ -36,17 +36,17 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
 
 	Route::get('customer', 'CustomerController@index')->name('admin.customer.index');
 	Route::get('customer/create', 'CustomerController@create')->name('admin.customer.create');
-	Route::post('customer/create', 'CustomerController@store')->name('admin.customer.store'); 
-	Route::get('customer/edit/{id}', 'CustomerController@edit')->name('admin.customer.edit'); 
-	Route::post('customer/update/{id}', 'CustomerController@update')->name('admin.customer.update'); 
-	Route::delete('customer/delete/{id}', 'CustomerController@destroy')->name('admin.customer.delete'); 
+	Route::post('customer/create', 'CustomerController@store')->name('admin.customer.store');
+	Route::get('customer/edit/{id}', 'CustomerController@edit')->name('admin.customer.edit');
+	Route::post('customer/update/{id}', 'CustomerController@update')->name('admin.customer.update');
+	Route::delete('customer/delete/{id}', 'CustomerController@destroy')->name('admin.customer.delete');
 
 	Route::get('subadmin', 'SubAdminController@index')->name('admin.subadmin.index');
 	Route::get('subadmin/create', 'SubAdminController@create')->name('admin.subadmin.create');
-	Route::post('subadmin/create', 'SubAdminController@store')->name('admin.subadmin.store'); 
-	Route::get('subadmin/edit/{id}', 'SubAdminController@edit')->name('admin.subadmin.edit'); 
-	Route::post('subadmin/update/{id}', 'SubAdminController@update')->name('admin.subadmin.update'); 
-	Route::delete('subadmin/delete/{id}', 'SubAdminController@destroy')->name('admin.subadmin.delete'); 
+	Route::post('subadmin/create', 'SubAdminController@store')->name('admin.subadmin.store');
+	Route::get('subadmin/edit/{id}', 'SubAdminController@edit')->name('admin.subadmin.edit');
+	Route::post('subadmin/update/{id}', 'SubAdminController@update')->name('admin.subadmin.update');
+	Route::delete('subadmin/delete/{id}', 'SubAdminController@destroy')->name('admin.subadmin.delete');
 
 	// product start 
 	Route::get('product', 'ProductController@index')->name('admin-product-index');
@@ -56,5 +56,7 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
 	Route::post('product/update', 'ProductController@update')->name('admin-product-update');
 	Route::get('product/delete/{id}', 'ProductController@destroy')->name('admin-product-delete');
 	Route::get('subcat/{id}', 'ProductController@subcats')->name('admin-product-subcat');
-
+	//order start 
+	Route::get('order', 'OrderController@index')->name('admin-order-list');
+	Route::get('order/{id}', 'OrderController@view')->name('admin-order-view');
 });

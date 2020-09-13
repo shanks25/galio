@@ -1,5 +1,8 @@
 function checkout() {
-    $('#checkout_form').submit();
+    qty = $('#qty').val();
+    product_id = $('#product_id').val();
+    // $('#checkout_form').submit();
+    window.location = base_url + '/checkout/' + product_id + '/' + qty;
 }
 
 $('#state').on('change', function () {

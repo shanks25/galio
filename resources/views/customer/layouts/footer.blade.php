@@ -211,6 +211,34 @@
   <!-- Switcher JS [Please Remove this when Choose your Final Projct] -->
   <script src="{{asset('assets/js/switcher.js')}}"></script>
   <script src="{{asset('toaster/toastr.js')}}"></script>
+  <script src="{{asset('admin/js/jquery.validate.min.js')}}"></script>
+  <script>
+    $(function() {
+      $('.number-only').keypress(function(e) {
+          if (isNaN(this.value + "" + String.fromCharCode(e.charCode))) return false;
+        })
+        .on("cut copy paste", function(e) {
+          e.preventDefault();
+        });
+    });
+    $(document).ready(function() {
+
+      @if(Session::has('message'))
+      var type = "{{ Session::get('alert-type', 'info') }}";
+
+      switch (type) {
+
+        case 'success':
+          toastr.success("{{ Session::get('message') }}");
+          break;
+        case 'error':
+          toastr.error("{{ Session::get('message') }}");
+          break;
+      }
+      @endif
+    });
+    $("form").attr('autocomplete', 'off');
+  </script>
   @section('scripts')
   @show
   </body>
