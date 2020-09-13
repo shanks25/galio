@@ -7,14 +7,14 @@ use App\Http\Controllers\Controller;
 use App\ProductMaster;
 use App\State;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class CheckoutController extends Controller
 {
-    public function index($id, $qty)
+    public function index(Request $request)
     {
         // return $request->product_id;
-        $product =  ProductMaster::where('id', $id)->first();
+        $product =  ProductMaster::where('id', $request->product_id)->first();
+        $qty = $request->qty;
         $states = State::all();
         $city = City::all();
         // return $product;
@@ -31,13 +31,5 @@ class CheckoutController extends Controller
         $city = City::where('state_id', '=', $id)->get();
 
         return response()->json(['city' => $city], 200);
-    }
-    public function checkLogin()
-    {
-        if (Auth::id()) {
-            return 1;
-        } else {
-            return 0;
-        }
     }
 }

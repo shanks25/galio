@@ -68,7 +68,7 @@
                                     <span class="regular-price"><i class="fa fa-rupee"></i> {{$product->selling_price}}</span>
                                 </div>
                                 <p>{{$product->description}}</p>
-                                <form action="" method="post" id="checkout_form">
+                                <form action="{{route('checkout')}}" method="post" id="checkout_form">
                                     @csrf
                                     <div class="quantity-cart-box d-flex align-items-center">
                                         <div class="quantity">

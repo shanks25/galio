@@ -14,16 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 //customer route started
-Route::get('/', 'Customer\HomeController@index')->name('user-home');
+Route::get('/', 'Customer\HomeController@index')->name('home');
 Route::get('profile', 'Customer\CustomerProfileController@index');
-Route::post('profile', 'Customer\CustomerProfileController@updateProfile');
+Route::get('profile', 'Customer\CustomerProfileController@index');
+Route::get('subscribe', 'Customer\PaymentController@index');
+Route::post('razorpay', 'Customer\PaymentController@payment')->name('razorpay');
+Route::post('razorpayverify', 'Customer\PaymentController@razorpayverify')->name('razorpayverify');
 Route::get('changepassword', 'Customer\CustomerProfileController@changePassword')->name('customer.password');
 Route::get('product/{id}', 'Customer\ProductController@productDetails')->name('product_details');
 Route::get('product_quick_view', 'Customer\ProductController@quick_view')->name('product_quick_view');
-Route::get('checkout/{id}/{qty}', 'Customer\CheckoutController@index')->name('checkout');
+Route::post('checkout', 'Customer\CheckoutController@index')->name('checkout');
 Route::get('cities/{id}', 'Customer\CheckoutController@cities')->name('state-wise-city');
-Route::get('checklogin', 'Customer\CheckoutController@checkLogin')->name('checklogin');
-Route::post('placeorder', 'Customer\OrderController@addOrder')->name('add-order');
 
 //end customer route
 include('admin.php');

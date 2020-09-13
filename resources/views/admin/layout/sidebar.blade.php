@@ -45,7 +45,6 @@
           </ul>
         </li>
         <li class="product_management"><a href="{{route('admin-product-index')}}"><i class="fa fa-circle-o text-red"></i> <span>Product Management </span></a></li>
-        <li class="order"><a href="{{route('admin-order-list')}}"><i class="fa fa-circle-o text-red"></i> <span> Orders</span></a></li>
         <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
