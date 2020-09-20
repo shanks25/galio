@@ -15,6 +15,14 @@ class Order extends Model
     {
         return $this->belongsTo('App\User', 'customer_id');
     }
+
+    public function seller()
+    {
+        return $this->belongsTo('App\User', 'seller_id');
+    }
+
+
+
     public function address()
     {
         return $this->hasOne('App\AddressMaster', 'order_id');

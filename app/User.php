@@ -3,6 +3,7 @@
 namespace App;
 
 use App\City;
+use App\State;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -40,8 +41,19 @@ class User extends Authenticatable
     {
         return $this->belongsTo(City::class,'city_id');
     } 
+
+    public function state()
+    {
+        return $this->belongsTo(State::class,'state_id');
+    } 
+
     public function getFullNameAttribute()	 	 
     {	 	 
         return $this->first_name . " " . $this->last_name;	 	 
+    }
+
+    public function sellOrders()
+    {
+        return $this->hasMany('App\Order', 'seller_id');
     }
 }

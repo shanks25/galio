@@ -40,7 +40,7 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
 	Route::get('customer/edit/{id}', 'CustomerController@edit')->name('admin.customer.edit');
 	Route::post('customer/update/{id}', 'CustomerController@update')->name('admin.customer.update');
 	Route::delete('customer/delete/{id}', 'CustomerController@destroy')->name('admin.customer.delete');
-
+	Route::get('leads', 'LeadController@index')->name('admin.lead.index');
 	Route::get('subadmin', 'SubAdminController@index')->name('admin.subadmin.index');
 	Route::get('subadmin/create', 'SubAdminController@create')->name('admin.subadmin.create');
 	Route::post('subadmin/create', 'SubAdminController@store')->name('admin.subadmin.store');
