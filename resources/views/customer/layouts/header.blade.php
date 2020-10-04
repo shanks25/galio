@@ -128,18 +128,20 @@
 											<i class="fa fa-angle-down"></i>
 										</div>
 									</div>
-									<nav class="category-menu hm-1">
+									<!-- hm-1 -->
+									<nav class="category-menu {{ (request()->is('/')) ? 'hm-1' : 'category-style-2'}}">
 										<ul>
 											@foreach($CategoryMaster as $cat)
-											<li class="{{$cat->has('subCategiries')?'menu-item-has-children':''}}"><a href="shop-grid-left-sidebar.html">
-													<!-- <i class="fa fa-camera"></i> -->
+											<li class="{{$cat->has('subCategiries')?'menu-item-has-children':''}}"><a href="{{route('category-filter',$cat->id)}}">
+													<i class="fa fa-camera"></i>
 													{{$cat->name}}</a>
 												@if(isset($cat->subCategiries))
 												<!-- Mega Category Menu Start -->
 												<ul class="category-mega-menu">
 
 													@foreach($cat->subCategiries as $subcat)
-													<li><a href="shop-grid-left-sidebar.html">
+													<li><a href="{{route('sub-category-filter',[$cat->id,$subcat->id])}}">
+															<!-- shop-grid-left-sidebar.html -->
 															<!-- <i class="fa fa-clock-o"></i> -->
 															{{$subcat->name}}</a></li>
 													@endforeach
@@ -157,20 +159,21 @@
 									<nav id="mobile-menu">
 										<ul>
 											<li class="active"><a href="/"><i class="fa fa-home"></i>Home</a>
-
 												@foreach($cat->subCategiries as $subcat)
-											<li><a href="shop-grid-left-sidebar.html">
+											<li>
+												<a href="shop-grid-left-sidebar.html">
 													<!-- <i class="fa fa-clock-o"></i> -->
-													{{$subcat->name}}</a></li>
+													{{$subcat->name}}</a>
+											</li>
 											@endforeach
-
+											<li>
+												<a href="/productl">Product</a>
+											</li>
+											<li><a href="/contact-us">Contact us</a></li>
 										</ul><!-- Mega Category Menu End -->
 
 
-										<li><a href="/productl">Product</a>
 
-										</li>
-										<li><a href="/contact-us">Contact us</a></li>
 										</ul>
 									</nav>
 								</div>

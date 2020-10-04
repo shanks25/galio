@@ -191,7 +191,9 @@
     <i class="fa fa-angle-up"></i>
   </div>
   <!-- Scroll to Top End -->
-
+  <script>
+    var base_url = "{{url('/')}}";
+  </script>
 
 
   <!--All jQuery, Third Party Plugins & Activation (main.js) Files-->
@@ -211,6 +213,8 @@
   <!-- Switcher JS [Please Remove this when Choose your Final Projct] -->
   <script src="{{asset('assets/js/switcher.js')}}"></script>
   <script src="{{asset('toaster/toastr.js')}}"></script>
+
+  <script src="{{asset('admin/js/jquery.validate.min.js')}}"></script>
   @section('scripts')
   @show
   </body>

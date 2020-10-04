@@ -23,9 +23,14 @@ Route::post('razorpayverify', 'Customer\PaymentController@razorpayverify')->name
 Route::get('changepassword', 'Customer\CustomerProfileController@changePassword')->name('customer.password');
 Route::get('product/{id}', 'Customer\ProductController@productDetails')->name('product_details');
 Route::get('product_quick_view', 'Customer\ProductController@quick_view')->name('product_quick_view');
+Route::get('checkout/{id}/{qty}', 'Customer\CheckoutController@index')->name('checkout-qty');
 Route::post('checkout', 'Customer\CheckoutController@index')->name('checkout');
 Route::get('cities/{id}', 'Customer\CheckoutController@cities')->name('state-wise-city');
-
+Route::get('checklogin', 'Customer\CheckoutController@checkLogin')->name('checklogin');
+Route::post('placeorder', 'Customer\OrderController@addOrder')->name('add-order');
+// category listig routes 
+Route::get('categories/{id}', 'Customer\CategoryController@index')->name('category-filter');
+Route::get('sub-categories/{id}/{subid}', 'Customer\CategoryController@subCategory')->name('sub-category-filter');
 //end customer route
 include('admin.php');
 

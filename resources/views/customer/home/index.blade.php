@@ -105,12 +105,12 @@
 				<div class="product-thumb">
 					<a href="{{route('product_details',$product	->id)}}">
 						@if(isset($product->productImagesFirst))
-						
+
 						<img src="{{asset($product->productImagesFirst->path)}}" class="img-pri" alt="">
 						@endif
 						@if(isset($product->productImagesLast))
 						<img src="{{asset($product->productImagesLast->path)}}" class="img-sec" alt="">
-						
+
 						@else
 						<img src="{{asset('assets/img/product/product-img2.jpg')}}" class="img-sec" alt="">
 						@endif
@@ -123,7 +123,7 @@
 						</a>
 						<!-- <a href="#" data-toggle="tooltip" data-placement="left" title="Wishlist"><i class="fa fa-heart-o"></i></a> -->
 						<!-- <a href="#" data-toggle="tooltip" data-placement="left" title="Compare"><i class="fa fa-refresh"></i></a> -->
-						<a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fa fa-shopping-cart"></i></a>
+						<!-- <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fa fa-shopping-cart"></i></a> -->
 					</div>
 				</div>
 				<div class="product-content">
@@ -145,7 +145,7 @@
 			</div>
 			@endforeach
 			<!-- product single item end -->
-			
+
 		</div>
 		<!-- featured category end -->
 	</div>
@@ -200,8 +200,7 @@
 @section('scripts')
 <script src="{{asset('assets/js/landingpage.js')}}"></script>
 <script>
-    var product_quick_view = "{{route('product_quick_view')}}";
-
+	var product_quick_view = "{{route('product_quick_view')}}";
 </script>
 
 @endsection
